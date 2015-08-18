@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Dbfw-devel] DBFW appendChild
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/dbfw-devel/2006-August/index.html" >
+   <LINK REL="made" HREF="mailto:dbfw-devel%40lists.berlios.de?Subject=Re%3A%20%5BDbfw-devel%5D%20DBFW%20appendChild&In-Reply-To=%3C1156840261.44f3fb4577826%40cp.tophost.it%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Dbfw-devel] DBFW appendChild</H1>
+    <B>Loreno Edelmondo</B> 
+    <A HREF="mailto:dbfw-devel%40lists.berlios.de?Subject=Re%3A%20%5BDbfw-devel%5D%20DBFW%20appendChild&In-Reply-To=%3C1156840261.44f3fb4577826%40cp.tophost.it%3E"
+       TITLE="[Dbfw-devel] DBFW appendChild">loade at loade.com
+       </A><BR>
+    <I>Tue Aug 29 10:31:01 CEST 2006</I>
+    <P><UL>
+        
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1">[ date ]</a>
+              <a href="thread.html#1">[ thread ]</a>
+              <a href="subject.html#1">[ subject ]</a>
+              <a href="author.html#1">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Mark,
+I have modified the file:
+
+dbfw/js/filter.js
+
+I have modified the function select_add_option:
+
+function    select_add_option    (sel, value, descr)
+ {
+    var opt = document.createElement(&quot;OPTION&quot;);
+    opt.value = value;
+    opt.text = descr;
+    if ( isIE4 )
+     {
+        sel.add(opt);
+     }
+     else
+     {
+        sel.appendChild(opt);
+     }
+ }
+
+allowing to execute the searches also from IE.
+
+bye
+
+loade
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+  <A HREF="https://lists.berlios.de/mailman/listinfo/dbfw-devel">loade at loade.com</A> |    www.loade.com
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    GNU/Linux     | Tel. +39.3281212557
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+&#171;Il copyleft ha lo scopo di incoraggiare le persone a cooperare e ad aiutarsi
+reciprocamente, e a dare a tutti la stessa libert&#224;.&#187;
+Richard Stallman
+
+----------------------------------------------------------------
+This message was sent using IMP, the Internet Messaging Program.
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1">[ date ]</a>
+              <a href="thread.html#1">[ thread ]</a>
+              <a href="subject.html#1">[ subject ]</a>
+              <a href="author.html#1">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/dbfw-devel">More information about the Dbfw-devel
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,49 @@
+From loade at loade.com  Tue Aug 29 10:31:01 2006
+From: loade at loade.com (Loreno Edelmondo)
+Date: Tue, 29 Aug 2006 10:31:01 +0200
+Subject: [Dbfw-devel] DBFW appendChild
+Message-ID: <1156840261.44f3fb4577826@cp.tophost.it>
+
+Hi Mark,
+I have modified the file:
+
+dbfw/js/filter.js
+
+I have modified the function select_add_option:
+
+function    select_add_option    (sel, value, descr)
+ {
+    var opt = document.createElement("OPTION");
+    opt.value = value;
+    opt.text = descr;
+    if ( isIE4 )
+     {
+        sel.add(opt);
+     }
+     else
+     {
+        sel.appendChild(opt);
+     }
+ }
+
+allowing to execute the searches also from IE.
+
+bye
+
+loade
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+  loade at loade.com |    www.loade.com
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    GNU/Linux     | Tel. +39.3281212557
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+?Il copyleft ha lo scopo di incoraggiare le persone a cooperare e ad aiutarsi
+reciprocamente, e a dare a tutti la stessa libert?.?
+Richard Stallman
+
+----------------------------------------------------------------
+This message was sent using IMP, the Internet Messaging Program.
+
+
+

@@ -1,0 +1,36 @@
+From loade at loade.com  Fri Nov 10 13:24:31 2006
+From: loade at loade.com (Loreno Edelmondo)
+Date: Fri, 10 Nov 2006 13:24:31 +0100
+Subject: [Dbfw-devel] Headers
+Message-ID: <1163161471.45546f7f6439a@cp.tophost.it>
+
+Hi Marco,
+I have modified the function XMIME_SendFile
+The pdf did not come opened with IE6.
+
+        Header('Content-Length: '.filesize($filename));
+        Header("HTTP/1.1 200 OK");
+        Header("Status: 200 OK");
+        Header("Accept-Ranges: bytes");
+        Header("Content-Transfer-Encoding: Binary");
+        Header("Content-Type: {$type}; charset=utf-8");
+        Header("Content-Disposition: inline; filename=" . basename($filename) );
+
+bye
+Loreno
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+  loade at loade.com |    www.loade.com
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    GNU/Linux     | Tel. +39.3281212557
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+?Il copyleft ha lo scopo di incoraggiare le persone a cooperare e ad aiutarsi
+reciprocamente, e a dare a tutti la stessa libert?.?
+Richard Stallman
+
+----------------------------------------------------------------
+This message was sent using IMP, the Internet Messaging Program.
+
+
+
